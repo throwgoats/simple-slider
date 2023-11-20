@@ -1,0 +1,29 @@
+button {
+  flex: 1;
+  font-size: 2em;
+  padding: 0.25rem 1.5rem;
+  border: thin solid oklch(64% 0.152 138.7 / 63.5%);
+  border-block-end: 0;
+  --h: 150;
+  --s: 50%;
+  --l: 50%;
+  --a: 0.5;
+  background-color: hsl(var(--h) var(--s) var(--l) / var(--a));
+  transition: background-color 100ms ease-in-out;
+  color: rgb(255 255 255 / 0.75);
+}
+button + button {
+  border-inline-start: 0;
+}
+button:first-of-type {
+  border-top-left-radius: 0.75rem;
+}
+button:last-of-type {
+  border-top-right-radius: 0.75rem;
+}
+button:hover {
+  --l: 75%;
+}
+button:focus {
+  --s: 75%;
+}
